@@ -130,6 +130,10 @@ if [[ "$count_timeline" -ge "1" ]]; then
       head -`echo "$lines - 3" | bc`;
     echo ",";
   done > ${timeline["tf"]}
+else
+  # the count_timeline is 0
+  echo "Count timeline is 0; creating trivial ${timeline["tf"]}"
+  touch ${timeline["tf"]}
 fi
 
 # compute a difference between the machine time and GPU time
