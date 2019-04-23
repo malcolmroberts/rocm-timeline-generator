@@ -19,19 +19,19 @@ timeline or both based on the environment variables set to gather
 events log during the application run.
 
 * To obtain HCC trace, use env variables:
-    HCC_PROFILE=2 HCC_PROFILE_VERBOSE=0x1f
+    `HCC_PROFILE=2 HCC_PROFILE_VERBOSE=0x1f`
   
 * To obtain HIP trace, use env variables
-    HIP_TRACE_API=1 HIP_TRACE_API_COLOR=none
+    `HIP_TRACE_API=1 HIP_TRACE_API_COLOR=none`
     
 You may choose to enable one or both HIP or HCC trace to capture the log.  
 
 **Example 1: HCC log**  
-HCC_PROFILE=2 HCC_PROFILE_VERBOSE=0x1f python test.py 2>&1 | tee log
+`HCC_PROFILE=2 HCC_PROFILE_VERBOSE=0x1f python test.py 2>&1 | tee log`
 
 **Example 2: HIP and HCC log**  
 
-HIP_TRACE_API=1 HIP_TRACE_API_COLOR=none HCC_PROFILE=2 HCC_PROFILE_VERBOSE=0x1f python test.py 2>&1 | tee log
+`HIP_TRACE_API=1 HIP_TRACE_API_COLOR=none HCC_PROFILE=2 HCC_PROFILE_VERBOSE=0x1f python test.py 2>&1 | tee log`
 
 ### 2. Formatting the log, creating a json file
 
