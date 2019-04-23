@@ -34,7 +34,7 @@ tf_tl_prefix=`get_arg $3 "_none"`
 start_time=`get_arg $4 -1`
 end_time=`get_arg $5 -1`
 
-tmp=/tmp
+tmp=`mktemp -d`
 awk_fn=fn-rocm-timeline-generator.awk
 
 echo "log file ${log_file}"
